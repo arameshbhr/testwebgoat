@@ -9,8 +9,8 @@ jobs:
     - uses: actions/setup-go@v1
       with:
         go-version: "1.13"
-    - name: Snyk monitor
-      run: snyk test --json-file-output=snyk.json
+    - name: Snyk test
+      run: snyk test --all-projects --json-file-output=snyk.json
       continue-on-error: true
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
