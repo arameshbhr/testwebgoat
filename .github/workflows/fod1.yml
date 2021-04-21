@@ -21,8 +21,6 @@ on:
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ add_test_clientside_filtering ]
-  schedule:
-    - cron: '45 13 * * 1'
 
 jobs:
   FoD-SAST-Scan:
