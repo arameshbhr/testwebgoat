@@ -3,7 +3,7 @@
 # dynamic, interactive, and runtime security testing is available on premises or as a service. To learn more about Fortify, start a free trial #
 # or contact our sales team, visit microfocus.com/appsecurity.                                                                                 #
 #                                                                                                                                              #
-# Use this workflow template as a basis for integrating Fortify on Demand Static Application Security Testing(SAST) into your GitHub workflows.#
+# Use this workflow template as a basis for integxrating Fortify on Demand Static Application Security Testing(SAST) into your GitHub workflows.#
 # This template demonstrates the steps to prepare the code+dependencies, initiate a scan, download results once complete and import into       #
 # GitHub Security Code Scanning Alerts. Existing customers should review inputs and environment variables below to configure scanning against  #
 # an existing application in your Fortify on Demand tenant. Additional information is available in the comments throughout the workflow, the   #
