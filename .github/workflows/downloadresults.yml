@@ -1,11 +1,32 @@
-name: Import FoD SAST Results
-on: [workflow dispatch]
-      
-jobs:                                                  
-  Import-FoD-SAST:
+
+name: Fortify on Demand Scan results download
+
+# TODO: Customize trigger events based on your DevSecOps processes and typical FoD SAST scan time
+on:
+  workflow_dispatch:
+  push:
+    branches: [ add_test_clientside_filtering ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ add_test_clientside_filtering ]
+
+jobs:
+  FoD-SAST-Scan:
+    # Use the appropriate runner for building your source code.
+    # TODO: Use a Windows runner for .NET projects that use msbuild. Additional changes to RUN commands will be required to switch to Windows syntax.
     runs-on: ubuntu-latest
 
     steps:
+      # Check out source code
+      - name: Check Out Source Code
+        uses: actions/checkout@v2
+
+      # Java 8 required by ScanCentral Client and FoD Uploader(Univeral CI Tool)
+      - name: Setup Java
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
       # Pull SAST issues from Fortify on Demand and generate SARIF output
       - name: Download Results
         uses: fortify/gha-fod-generate-sarif@master
