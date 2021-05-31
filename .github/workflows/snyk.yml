@@ -18,7 +18,7 @@ jobs:
       #run: scancentral package $PACKAGE_OPTS -o package.zip
       #run: wget 'https://github.com/snyk-tech-services/jira-tickets-for-new-vulns/releases/download/0.7.0/snyk-jira-sync-linux'
     #- name: Autosubmit Jira
-    #jjfjdjfj
+    #jjfjdjfjdsds
      # run: ./snyk-jira-sync-linux -orgID=arameshbhr -token=47944d5a-6491-4b94-bb0e-9b8ecd810204 -jiraProjectID= 
     - uses: garethr/snyk-to-sarif@master
     - uses: actions/upload-artifact@v2
